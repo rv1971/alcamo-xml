@@ -1,6 +1,6 @@
 {
     "name": "alcamo/xml",
-    "description": "XML syntax an expanded names",
+    "description": "XML syntax and expanded names",
     "keywords": [ "xml", "syntax" ],
     "license": "Apache-2.0",
     "require": {

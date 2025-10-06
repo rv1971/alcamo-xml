@@ -15,6 +15,14 @@ use alcamo\exception\UnknownNamespacePrefix;
  */
 class XName
 {
+    /// Create from a string as that created by __toString()
+    public static function newFromString(string $name): ?self
+    {
+        $a = explode(' ', $name, 2);
+
+        return isset($a[1]) ? new self($a[0], $a[1]) : new self(null, $name);
+    }
+
     /**
      * @brief Create from qualified name and namespace map
      *
