@@ -11,7 +11,7 @@ use alcamo\exception\UnknownNamespacePrefix;
  *
  * @sa [Expanded name](https://www.w3.org/TR/xml-names/#dt-expname)
  *
- * @date Last reviewed 2021-06-15
+ * @date Last reviewed 2025-10-06
  */
 class XName
 {
@@ -124,7 +124,7 @@ class XName
         }
 
         return new self(
-            $matches[1] != '' ? $matches[1] : (string)$defaultNs,
+            $matches[1] != '' ? $matches[1] : $defaultNs,
             $matches[2]
         );
     }

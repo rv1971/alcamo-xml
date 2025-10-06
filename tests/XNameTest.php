@@ -142,4 +142,28 @@ class XNameTest extends TestCase
             'https://example.edu'
         );
     }
+
+    /**
+     * @dataProvider newFromUriProvider
+     */
+    public function testNewFromUri($uri, $defaultNs, $expectedString): void
+    {
+        $xName = XName::newFromUri($uri, $defaultNs);
+
+        $this->assertSame($expectedString, (string)$xName);
+    }
+
+    public function newFromUriProvider(): array
+    {
+        return [
+            [ 'foo', null, 'foo' ],
+            [ 'bar', 'https://example.org', 'https://example.org bar' ],
+            [ 'https://example.org/baz', null, 'https://example.org/ baz' ],
+            [
+                'https://example.org#qux-quux.corge',
+                'https://example.com',
+                'https://example.org# qux-quux.corge'
+            ]
+        ];
+    }
 }
