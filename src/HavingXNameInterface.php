@@ -9,5 +9,6 @@ namespace alcamo\xml;
  */
 interface HavingXNameInterface
 {
+    /// Get expanded name
     public function getXName(): XName;
 }

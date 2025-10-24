@@ -30,7 +30,7 @@ class XName
      *
      * @param $map array|ArrayAccess map of prefixes to namespace names.
      *
-     * @param $defaultNs string|null default namespace to add to unprefixed
+     * @param $defaultNs default namespace to add to unprefixed
      * names.
      */
     public static function newFromQNameAndMap(
@@ -61,12 +61,12 @@ class XName
     /**
      * @brief Create from qualified name and DOM context node
      *
-     * @param $qName qualified name
+     * @param $qName qualified name.
      *
-     * @param $context context node
+     * @param $context context node.
      *
      * @param $defaultNs default namespace to add to unprefixed names; if not
-     * provided, the context's default namespace is used
+     * provided, the context's default namespace is used.
      */
     public static function newFromQNameAndContext(
         string $qName,
@@ -149,11 +149,13 @@ class XName
         $this->localName_ = $localName;
     }
 
+    /// Get namespace name
     public function getNsName(): ?string
     {
         return $this->nsName_;
     }
 
+    /// Get local name
     public function getLocalName(): string
     {
         return $this->localName_;
