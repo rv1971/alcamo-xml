@@ -16,6 +16,9 @@ class XNameTest extends TestCase
 
         $this->assertSame($nsName, $xName->getNsName());
         $this->assertSame($localName, $xName->getLocalName());
+
+        $this->assertEquals([ $nsName, $localName ], $xName->getPair());
+
         $this->assertSame($expectedString, (string)$xName);
         $this->assertEquals($xName, XName::newFromString((string)$xName));
     }

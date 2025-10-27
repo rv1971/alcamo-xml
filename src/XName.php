@@ -162,6 +162,19 @@ class XName
     }
 
     /**
+     * @brief Get array made of namespace name and local name
+     *
+     * Useful for efficient and concise expressions like
+     * ~~~
+     * [ $nsName, $localName ] = $xName->getPair();
+     * ~~~
+     */
+    public function getPair(): array
+    {
+        return [ $this->nsName_, $this->localName_ ];
+    }
+
+    /**
      * @brief Return \<namespace-name>\<space>\<local-name>, or \<local-name>
      * if the namespace is unset.
      *
