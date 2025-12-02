@@ -167,6 +167,11 @@ class XNameTest extends TestCase
                 'https://example.org#qux-quux.corge',
                 'https://example.com',
                 'https://example.org# qux-quux.corge'
+            ],
+            [
+                'http://www.w3.org/2001/XMLSchema#QName',
+                null,
+                'http://www.w3.org/2001/XMLSchema QName'
             ]
         ];
     }

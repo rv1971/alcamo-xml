@@ -15,6 +15,9 @@ use alcamo\exception\UnknownNamespacePrefix;
  */
 class XName
 {
+    /// XML Schema namespace
+    public const XSD_NS = 'http://www.w3.org/2001/XMLSchema';
+
     /// Create from a string as that created by __toString()
     public static function newFromString(string $name): ?self
     {
@@ -131,10 +134,21 @@ class XName
             return new self($uri != '' ? $uri : (string)$defaultNs, '');
         }
 
-        return new self(
-            $matches[1] != '' ? $matches[1] : $defaultNs,
-            $matches[2]
-        );
+        if ($matches[1] == '') {
+            return new self($defaultNs, $matches[2]);
+        }
+
+        /** In the special case that the first part is the XML
+         *  schema namespace with a `#` appended, remove the `#`. Indeed,
+         *  there is an inconsistency with XMLSchema because the namespace
+         *  name of XMLSchema is `http://www.w3.org/2001/XMLSchema` while URIs
+         *  to XMLSchema types are built by prepending
+         *  `http://www.w3.org/2001/XMLSchema#`. */
+        if ($matches[1] == self::XSD_NS . '#') {
+            $matches[1] = self::XSD_NS;
+        }
+
+        return new self($matches[1], $matches[2]);
     }
 
     private $nsName_;    ///< Namespace name, if any
