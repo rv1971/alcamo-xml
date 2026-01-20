@@ -46,7 +46,7 @@ class Syntax
     public const Q_NAME = '(' . self::NC_NAME . ':)?' . self::NC_NAME;
 
     /// [NameChar](https://www.w3.org/TR/xml/#NT-NameChar) regexp
-    public const NAME_REGEXP    = '/^' . self::NAME    . '$/u';
+    public const NAME_REGEXP    = '/^' . self::NAME . '$/u';
 
     /// [Nmtoken](https://www.w3.org/TR/xml/#NT-Nmtoken) regexp
     public const NMTOKEN_REGEXP = '/^' . self::NMTOKEN . '$/u';
@@ -55,5 +55,11 @@ class Syntax
     public const NC_NAME_REGEXP = '/^' . self::NC_NAME . '$/u';
 
     /// [QName](https://www.w3.org/TR/xml-names/#NT-QName) regexp
-    public const Q_NAME_REGEXP  = '/^' . self::Q_NAME  . '$/u';
+    public const Q_NAME_REGEXP  = '/^' . self::Q_NAME . '$/u';
+
+    /// [EncName](https://www.w3.org/TR/xml/#NT-EncName) regexp
+    public const ENC_NAME_REGEXP = '/[A-Za-z]([-.0-9A-Z_a-z])*$/';
+
+    /// [VersionNum](https://www.w3.org/TR/xml/#NT-VersionNum) regexp
+    public const VERSION_NUM_REGEXP = '/^1\.\d+$/';
 }
