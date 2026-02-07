@@ -49,10 +49,14 @@ interface NamespaceConstantsInterface
     /// XSL transform namespace
     public const XSL_NS = 'http://www.w3.org/1999/XSL/Transform';
 
+    /// Proprietary namespace for http-related data
+    public const HTTP_NS = 'tag:rv1971@web.de,2021:alcamo:ns:http#';
+
     /// Map of canonical namespace prefixes
     public const NS_PRFIX_TO_NS_URI = [
         'dc'    => self::DC_NS,
         'hfp'   => self::HFP_NS,
+        'http'  => self::HTTP_NS,
         'owl'   => self::OWL_NS,
         'php'   => self::PHP_XPATH_NS,
         'rdf'   => self::RDF_NS,
@@ -66,11 +70,11 @@ interface NamespaceConstantsInterface
         'xsl'   => self::XSL_NS
     ];
 
-
     /// Map of namespace names to canonical namespace prefixes
     public const NS_URI_TO_NS_PREFIX = [
         self::DC_NS        => 'dc',
         self::HFP_NS       => 'hfp',
+        self::HTTP_NS      => 'http',
         self::OWL_NS       => 'owl',
         self::PHP_XPATH_NS => 'php',
         self::RDF_NS       => 'rdf',
