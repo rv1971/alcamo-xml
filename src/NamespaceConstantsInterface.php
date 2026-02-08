@@ -53,7 +53,7 @@ interface NamespaceConstantsInterface
     public const HTTP_NS = 'tag:rv1971@web.de,2021:alcamo:ns:http#';
 
     /// Map of canonical namespace prefixes
-    public const NS_PRFIX_TO_NS_URI = [
+    public const NS_PRFIX_TO_NS_NAME = [
         'dc'    => self::DC_NS,
         'hfp'   => self::HFP_NS,
         'http'  => self::HTTP_NS,
@@ -71,7 +71,7 @@ interface NamespaceConstantsInterface
     ];
 
     /// Map of namespace names to canonical namespace prefixes
-    public const NS_URI_TO_NS_PREFIX = [
+    public const NS_NAME_TO_NS_PREFIX = [
         self::DC_NS        => 'dc',
         self::HFP_NS       => 'hfp',
         self::HTTP_NS      => 'http',
