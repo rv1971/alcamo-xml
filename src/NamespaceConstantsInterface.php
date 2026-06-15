@@ -51,4 +51,7 @@ interface NamespaceConstantsInterface
 
     /// Proprietary namespace for http-related data
     public const HTTP_NS = 'tag:rv1971@web.de,2021:alcamo:ns:http#';
+
+    /// Proprietary namespace for XML schama extensions
+    public const ALCAMO_SCHEMA_NS = 'tag:rv1971@web.de,2021:alcamo:ns:schema#';
 }
