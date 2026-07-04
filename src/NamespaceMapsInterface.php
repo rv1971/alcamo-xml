@@ -27,6 +27,7 @@ interface NamespaceMapsInterface extends NamespaceConstantsInterface
         'xh11d' => self::XH11D_NS,
         'xhv'   => self::XHV_NS,
         'xml'   => self::XML_NS,
+        'xmlns' => self::XMLNS_NS,
         'xsd'   => self::XSD_NS,
         'xsi'   => self::XSI_NS,
         'xsl'   => self::XSL_NS
@@ -45,6 +46,7 @@ interface NamespaceMapsInterface extends NamespaceConstantsInterface
         self::XH11D_NS     => 'xh11d',
         self::XHV_NS       => 'xhv',
         self::XML_NS       => 'xml',
+        self::XMLNS_NS     => 'xmlns',
         self::XSD_NS       => 'xsd',
         self::XSI_NS       => 'xsi',
         self::XSL_NS       => 'xsl'

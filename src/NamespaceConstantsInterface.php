@@ -40,6 +40,9 @@ interface NamespaceConstantsInterface
     /// XML namespace
     public const XML_NS = 'http://www.w3.org/XML/1998/namespace';
 
+    /// XMLNS namespace
+    public const XMLNS_NS = 'http://www.w3.org/2000/xmlns/';
+
     /// XML Schema namespace
     public const XSD_NS = 'http://www.w3.org/2001/XMLSchema';
 
