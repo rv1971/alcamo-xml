@@ -37,6 +37,9 @@ interface NamespaceConstantsInterface
     /// XHTML vocabulary namespace
     public const XHV_NS = 'http://www.w3.org/1999/xhtml/vocab#';
 
+    /// XInclude namespace
+    public const XI_NS = 'http://www.w3.org/2001/XInclude';
+
     /// XML namespace
     public const XML_NS = 'http://www.w3.org/XML/1998/namespace';
 
