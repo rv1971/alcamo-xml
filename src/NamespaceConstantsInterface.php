@@ -55,6 +55,9 @@ interface NamespaceConstantsInterface
     /// XSL transform namespace
     public const XSL_NS = 'http://www.w3.org/1999/XSL/Transform';
 
+    /// Proprietary namespace for Exif-related data
+    public const EXIF_NS = 'tag:rv1971@web.de,2021:alcamo:ns:exif#';
+
     /// Proprietary namespace for http-related data
     public const HTTP_NS = 'tag:rv1971@web.de,2021:alcamo:ns:http#';
 

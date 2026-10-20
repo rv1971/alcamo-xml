@@ -17,6 +17,7 @@ interface NamespaceMapsInterface extends NamespaceConstantsInterface
     /// Map of canonical namespace prefixes
     public const NS_PRFIX_TO_NS_NAME = [
         'dc'    => self::DC_NS,
+        'exif'  => self::EXIF_NS,
         'hfp'   => self::HFP_NS,
         'http'  => self::HTTP_NS,
         'owl'   => self::OWL_NS,
@@ -37,6 +38,7 @@ interface NamespaceMapsInterface extends NamespaceConstantsInterface
     /// Map of namespace names to canonical namespace prefixes
     public const NS_NAME_TO_NS_PREFIX = [
         self::DC_NS        => 'dc',
+        self::EXIF_NS      => 'exif',
         self::HFP_NS       => 'hfp',
         self::HTTP_NS      => 'http',
         self::OWL_NS       => 'owl',
